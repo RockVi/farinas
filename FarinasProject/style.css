@@ -1,0 +1,580 @@
+body {
+  /* background-image: url(Templates/img.Templates/escacs.jpg); */
+  /* background-image: url(IMG/Backgrounds/background_Chest.jpg); */
+  
+  margin: 0px;
+}
+
+/* Generalitats del DIV CONTENEDOR de tot */
+#container {
+  background-color: white;
+  max-width: 97%;
+  width: 1000px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-areas: "header", "nav", "main", "footer";
+}
+
+/* Generalitats del HEADER*/
+header {
+  background-color: white;
+  
+  height: 180px;
+  
+}
+#main-title {
+  color: black;
+  text-align: center;
+  font-size: 80px;
+}
+
+/* Generalitats de la BARRA DE NAVEGACIÓ GENERAL*/
+nav {
+  font-size: 25px;
+  width: 1000px;
+  height: 70px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-areas: ". . . . . . .";
+}
+
+/* Generalitats dels BOTONS de navegació en conjunt */
+.nav-content {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  width: 160px;
+  text-align: center;
+  padding-top: 20px; /*Em centra el text dins del div*/
+}
+#new-recipe {
+  padding-top: 7px; /*Em centra l'únic text de 2 línies dins del seu div*/
+}
+
+/*Reacció dels botons en passar el cursor*/
+.nav-content:hover {
+  background-color: lightgray;
+  color: black;
+  transition: 0.5s;
+}
+.nav-content:hover > a {
+  color: black;
+}
+#recipies:hover{
+  color: black;
+}
+
+/* Desplegable del botó RECEPTES */
+.dropdown-content {
+  background-color: rgb(241, 255, 255);
+  text-align: left;
+  position: relative;
+  display: none;
+  width: 500%;
+  height: 550px;
+  margin-top: 25px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: 1s;
+}
+
+/* Layout del DESPLEGABLE del botó RECEPTES */
+#recipies-list {
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 0px;
+
+  display: grid;
+  grid-template-areas: "." "." ".";
+  gap: 10px;
+}
+.recipies-sublist {
+  list-style: none;
+  padding: 0px 20px;
+
+  display: grid;
+  grid-template-areas: "area area";
+  gap: 10px;
+}
+.recipies-sublist > li {
+  border-bottom: 1px solid lightgrey;
+}
+.sublist-title {
+  grid-area: area;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+  margin: 10px 0px;
+}
+
+/* Generalitats del DIV MAIN PRINCIPAL*/
+#main {
+  width: 1000px;
+  background-color: white;
+  display: grid;
+  grid-template-areas: ". .";
+  gap: 0px;
+}
+
+/* Generalitats de l'ASIDE LATERAL*/
+aside {
+  width: 180px;
+  margin: 0px 20px;
+}
+#flours-dictionary {
+  height: auto;
+}
+#flours-list-title {
+  background-color: black;
+  color: white;
+  height: 40px;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+}
+#flours-list {
+  background-color: gold;
+  border: 2px solid black;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 15px;
+  list-style: none;
+  line-height: 1.5;
+}
+.flours-list-item a {
+  font-size: 20px;
+}
+.flours-list-item a:hover {
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+/* Generalitats de la SECCIÓ PRINCIPAL*/
+/* Definició de la graella general del SECTION que servirà per totes les sites*/
+section {
+  min-width: 80%;
+  width: 730px;
+  height: auto;
+  font-size: 25px;
+  margin: 10px 0px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+/* Generalitats del FOOTER GENERAL*/
+#footer-content {
+  width: 1000px;
+  background-color: black;
+  color: white;
+  height: 150px;
+
+  display: grid;
+  grid-template-areas: ". .";
+}
+
+#logo {
+  width: 75px;
+  height: 75px;
+
+  margin: 35px;
+  margin-left: 75px;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+  font-size: 20px;
+  font-family: Great Vibes, cursive;
+
+  display: grid;
+  align-items: center;
+}
+#logo-letters {
+  margin-top: 22px;
+  padding-left: 15px;
+}
+
+#meta-info {
+  width: 300px;
+  height: 140px;
+  margin-top: 20px;
+  margin-left: 500px;
+  display: grid;
+  grid-template-areas: "." ".";
+}
+.social-icon {
+  margin: 0px 8px;
+}
+
+#facebook,
+#pinterest {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#instagram {
+  border-radius: 30%;
+}
+#twitter {
+  border-radius: 20%;
+}
+
+#policy-link1 {
+  margin: 0px 10px;
+  padding: 0px 10px;
+
+  border-right: 1px solid white;
+}
+
+/* Particularitats DE COVER_INDEX */
+#news-container {
+  display: grid;
+}
+#news-content {
+  display: grid;
+}
+#news-content button {
+  margin-left: 300px;
+}
+
+#ancient-seeds,
+#paleo-diet {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+}
+#ancient-seeds {
+  border-top: 1px solid lightgrey;
+}
+
+/* Particularitats de COVER_FLOURS.HTML */
+/* Definició de la graella de cada div dins del section */
+#glutenCereals,
+#glutenFreeCereals,
+#pseudoCereals,
+#legumes,
+#nuts,
+#roots,
+#fatSeeds,
+#fruits {
+  margin-left: 0px;
+  display: grid;
+  grid-template-areas: "area area area area";
+  gap: 5px;
+}
+
+.title {
+  grid-area: area;
+  color: black;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.title h2 {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.item {
+  background-color: gold;
+  text-shadow: 5px 5px 5px white;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+
+  display: grid;
+  align-items: center;
+}
+
+.item:hover {
+  transition: 2s;
+  width: 250px;
+  height: 220px;
+}
+.item > a:hover {
+  font-size: 30px;
+  transition: 1s;
+}
+
+.empty-item {
+  background-color: white;
+}
+
+.empty-item:hover {
+  width: 150px;
+  height: 150px;
+}
+/* IMATGES de cada item individual de COVER_FLOURS*/
+
+#wheat {
+  background-image: url(IMG/Gluten/bolsa-semillas-trigo-cuchara-madera.jpg);
+}
+#rye {
+  background-image: url(IMG/Gluten/centeno_espigas_granos_cuchara_mesa.jpg);
+}
+#barley {
+  background-image: url(IMG/Gluten/cebada.jfif);
+}
+#rice {
+  background-image: url(IMG/Gluten_Free/arroz3.jpg);
+}
+#oat {
+  background-image: url(IMG/Gluten_Free/avena_harina_granos_bol_mesa.jpg);
+}
+#linen {
+  background-image: url(IMG/Gluten_Free/lino_harina_semillas_cuchara_servilleta_mesa.jpg);
+}
+#corn {
+  background-image: url(IMG/Gluten_Free/maíz_harina_mazorcas_bol_mesa_cuchara.jpg);
+}
+#millet {
+  background-image: url(IMG/Gluten_Free/mijoPerlado_farina_granos_bowls_mesaPizarra.jpg);
+}
+#sorghum {
+  background-image: url(IMG/Gluten_Free/sorgo_harina_granos_bolMetal_mesa.jpg);
+}
+#teff {
+  background-image: url(IMG/Gluten_Free/teff_harina_granos_cuchara_bowl_servilleta_mesa.jpg);
+}
+#amaranth {
+  background-image: url(IMG/Pseudo-cereals/amaranto_granos_harina_bowl_servilleta_mesa.jpg);
+}
+#quinoa {
+  background-image: url(IMG/Pseudo-cereals/quinoaBlanca_garnos_harina_cuchara_bowl_servilleta.jpg);
+}
+#buckwheat {
+  background-image: url(IMG/Pseudo-cereals/alforfón_harina_bowl_granos_mesa.jpg);
+}
+#carob {
+  background-image: url(IMG/Legumes/algarroba_bainas_semillas_tabla_mesa.jpg);
+}
+#grass-pea {
+  background-image: url(IMG/Legumes/almortas_bote_vainas_saci.jpg);
+}
+#lupine {
+  background-image: url(IMG/Legumes/altramuz_harina_bowl_bainas.jpg);
+}
+#peanut {
+  background-image: url(IMG/Legumes/cacahuete_harina_bainas_bolsa_mesa.jpg);
+}
+#chickpea {
+  background-image: url(IMG/Legumes/garbanzo_harina_bowl_cuchara_mesa.jpg);
+}
+#pea {
+  background-image: url(IMG/Legumes/guisantes_bharina_granos_bowl_plato_mesa.jpg);
+}
+#bean {
+  background-image: url(IMG/Legumes/habas_harina_bowl_cuchara_mesa.jfif);
+}
+#kidney-bean {
+  background-image: url(IMG/Legumes/judia_harina_semillas_cuchara.jpg);
+}
+#mung-bean {
+  background-image: url(IMG/Legumes/judiaMungo_harina_granos_3bowls.jpg);
+}
+#lentils {
+  background-image: url(IMG/Legumes/lentejas_rojas_harina_granos_bote.jpg);
+}
+#soy {
+  background-image: url(IMG/Legumes/soja_harina_bowl_cuchara_menta_mesa.jpg);
+}
+#almond {
+  background-image: url(IMG/Nuts/almendra2.jpg);
+}
+#hazelnut {
+  background-image: url(IMG/Nuts/avellana2.jfif);
+}
+#acorn {
+  background-image: url(IMG/Nuts/bellota.jpg);
+}
+#chestnut {
+  background-image: url(IMG/Nuts/castaña3.jpg);
+}
+#walnut {
+  background-image: url(IMG/Nuts/nuez.jpg);
+}
+#arrowroot {
+  background-image: url(IMG/Roots/arrurruz2.jpg);
+}
+#sweet-potato {
+  background-image: url(IMG/Roots/boniato.jpg);
+}
+#tiger-nut {
+  background-image: url(IMG/Roots/chufa.jpg);
+}
+#maca {
+  background-image: url(IMG/Roots/maca.jpg);
+}
+#potato {
+  background-image: url(IMG/Roots/papa3.jfif);
+}
+#yucca {
+  background-image: url(IMG/Roots/yucca2.jpg);
+}
+#pumpkin {
+  background-image: url(IMG/Fat_Seeds/calabaza_semillas_harina_2.jpg);
+}
+#hemp {
+  background-image: url(IMG/Fat_Seeds/cañamo_semillas_harina3.jpg);
+}
+#chia {
+  background-image: url(IMG/Fat_Seeds/chia-flour2.jpg);
+}
+#sunflower {
+  background-image: url(IMG/Fat_Seeds/girasol_semillas_harina.jfif);
+}
+#sesame {
+  background-image: url(IMG/Fat_Seeds/sesamo_harina_bowl.jpg);
+}
+#coconut {
+  background-image: url(IMG/Fruits/coco_harina_cocos.jpg);
+}
+#plantain {
+  background-image: url(IMG/Fruits/palatano_macho_harina_bowl_tabla.jpg);
+}
+
+/* Particularitats de COVER_RECIPIES (x 3 - BREAD/ SAVORY/ SWEET*/
+.recipies-container {
+  display: grid;
+  gap: 50px;
+}
+.recipies-title {
+  background-image: url(IMG/Backgrounds/recipies_title.jpg);
+  height: 240px;
+  text-align: center;
+}
+.recipies-title h2 {
+  margin-top: 55px;
+}
+
+#bread-lists,
+#savory-lists,
+#sweet-lists {
+  display: grid;
+  grid-template-areas: ". .";
+}
+
+.cover-recipies-list {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+/*Particularitats de RECIPE_CARD_(nom de la recepta).HTML */
+.single-recipe-container {
+  min-width: 80%;
+  width: 730px;
+
+  display: grid;
+  gap: 10px;
+}
+.recipe-making h4 {
+  text-transform: uppercase;
+}
+.single-recipe-title {
+  background-color: wheat;
+  width: 730px;
+  height: 140px;
+  text-align: center;
+
+  display: grid;
+  align-items: center;
+}
+.recipe-fast-features {
+  width: 730px;
+  display: grid;
+  grid-template-areas: ". . .";
+}
+
+.single-recipe-content {
+  display: grid;
+  gap: 20px;
+}
+.recipe-ingredients {
+  width: 400px;
+}
+.recipe-ingredients h4 {
+  margin-bottom: 5px;
+}
+.recipe-ingredients ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 10px;
+}
+.recipe-ingredients h4,
+.recipe-ingredients li {
+  border-bottom: 0.1px solid lightgrey;
+  line-height: 45px;
+}
+.recipe-ingredients p {
+  border-bottom: 0.1px solid lightgrey;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.recipe-steps p {
+  font-weight: bold;
+}
+.recipe-steps ul,
+.recipe-tips ul {
+  padding-left: 15px;
+}
+
+/* Particularitats dels FORMULARIS (x 2) */
+
+#new-recipe-form {
+  display: grid;
+}
+#new-recipe-form-submit input,
+#contact-form-submit input {
+  width: 200px;
+  height: 30px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  margin-top: 50px;
+  font-size: 15px;
+}
+#form-policy {
+  margin-top: 40px;
+}
+.user-form h4 {
+  font-size: 20px;
+}
+.bigger-box {
+  height: 30px;
+  font-size: 15px;
+}
+.user-form textarea {
+  font-size: 15px;
+}
+
+/* Particularitats de les pàgines EN CONSTRUCCIÓ */
+
+.under-construction-content {
+  background-image: url(IMG/Backgrounds/under_construction.jpg);
+  height: 700px;
+  margin-left: 0px;
+}
+
+/* Generalitats de TOTS els hipervincles ANCOR */
+a {
+  text-decoration: none;
+}
+
+#header-logo,
+#policy-privacity a {
+  color: white;
+}
+
+.nav-content > a,
+#recipies{
+  color: gold;
+}
+
+.recipies-sublist a,
+.flours-list-item a,
+.item a,
+#news-content button a {
+  color: black;
+}
+
+.cover-recipies-list a{
+  color: grey; /*Per identificar quins HIPERVINCLES (fitxes de recepta) estan HABILITATS*/
+}
+
+#form-policy a {
+  color: rgb(74, 72, 72);
+}
